@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>How to integrate ESLint into VS Code | Make things better</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="In order to use ESLint on your VS Code, ESLint extension has to be installed. Let’s install ESLint extension on VS code. The extension uses the ESLint library, it is required to install it. 1$ npm ins">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to integrate ESLint into VS Code">
+<meta property="og:url" content="http://kangminchoi.github.io/2019/07/30/ESLint-extension/index.html">
+<meta property="og:site_name" content="Make things better">
+<meta property="og:description" content="In order to use ESLint on your VS Code, ESLint extension has to be installed. Let’s install ESLint extension on VS code. The extension uses the ESLint library, it is required to install it. 1$ npm ins">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-30T00:31:45.303Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to integrate ESLint into VS Code">
+<meta name="twitter:description" content="In order to use ESLint on your VS Code, ESLint extension has to be installed. Let’s install ESLint extension on VS code. The extension uses the ESLint library, it is required to install it. 1$ npm ins">
+  
+    <link rel="alternate" href="/atom.xml" title="Make things better" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  
+
+</head>
+</html>
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          <li><a class=""
+                 href="/index.html">Home</a></li>
+        
+          <li><a class=""
+                 href="/archives/">Archives</a></li>
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header">
+  <h1 class="blog-title">Make things better</h1>
+  
+</div>
+
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+          <article id="post-ESLint-extension" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      How to integrate ESLint into VS Code
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2019/07/30/ESLint-extension/" class="article-date"><time datetime="2019-07-29T21:41:35.000Z" itemprop="datePublished">2019-07-30</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In order to use ESLint on your VS Code, ESLint extension has to be installed. Let’s install ESLint extension on VS code.</p>
+<p>The extension uses the ESLint library, it is required to install it.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g eslint</span><br></pre></td></tr></table></figure>
+
+<p>Creates your working folder and move into it.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir &lt;working-folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;working-folder&gt;</span><br></pre></td></tr></table></figure>
+
+<p>ESLint will try to update package.json to manage dependencies which means you need to create package.json. Let’s create a basic package.json.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm init --y</span><br></pre></td></tr></table></figure>
+
+<p>Let’s create an ESLint configuration.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ eslint --init</span><br></pre></td></tr></table></figure>
+
+<p>ESLink will asks you some questions to setup a configuration file. As a result, you will get “.eslintrc.js”.</p>
+<p><strong>Don’t forget restart VS code.</strong></p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://kangminchoi.github.io/2019/07/30/ESLint-extension/" data-id="cjyp2ppw900003frf8204xx1j" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+    
+
+  
+</article>
+
+
+
+
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          
+  <div class="sidebar-module sidebar-module-inset">
+  <h4>About</h4>
+  <p>Hi, I'm Kangmin Choi.<br> I've been developing embedded software for more than 10 years.<br> Recently, I'm interested in front-end, back-end technologies.<br> I'm challenging myself to live my best life.</p>
+</div>
+
+
+  
+
+
+  
+
+
+  
+
+  
+  <div class="sidebar-module">
+    <h4>Archives</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2019/07/">July 2019</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>Recents</h4>
+    <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2019/07/30/ESLint-extension/">How to integrate ESLint into VS Code</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+        </div>
+    </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Kangmin Choi<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
